@@ -5,7 +5,12 @@ ii. Bugs and Errors:
     None
 
 iii. How to run program:
-    Make sure to have all libraries installed
+    Make sure to have all libraries installed:
+        pip install opencv-python
+        pip install numpy
+        pip install matplotlib
+        pip install scikit-image
+    
     python main.py
 
 iv. Input and Output Files:
