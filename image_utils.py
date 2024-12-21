@@ -2,7 +2,13 @@
 Name:  Kevin Fang
 File: image_utils.py
 Description: 
-    Handles image-related utilities and preprocessing.
+    This file is responsible for utility function related to image loading,
+    saving, displaying (display function wasn't used in the current main.py),
+    adding Gaussian blur and noise to the input images.
+    
+    The file and its functions are also meant to be imported into the main.py file
+    through the line in the main.py:
+    from image_utils import load_image, display_image, save_image, apply_gaussian_blur, add_gaussian_noise
 """
 import cv2
 import numpy as np

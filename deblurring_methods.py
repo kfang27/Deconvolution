@@ -2,7 +2,15 @@
 Name:  Kevin Fang
 File: deblurring_methods.py
 Description: 
-    Implements image deblurring techniques and performance metrics.
+    This file is responsible for the deblurring algorithms (Wiener filter and Lucy-Richardson)
+    that were meant to reduce the effects of noise and blur in the altered images.
+    It is also responsible for calculating the metric scores (PSNR, SSIM) of the newly
+    deblurred images to the original images. 
+    
+    The file and its functions are also meant to be imported into the main.py file
+    through the line in the main.py:
+    from deblurring_methods import apply_wiener_filter, apply_lucy_richardson, calculate_psnr, calculate_ssim
+
 """
 import cv2
 import numpy as np
