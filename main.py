@@ -55,7 +55,7 @@ from deblurring_methods import apply_wiener_filter, apply_lucy_richardson, calcu
 
 def main():
     # Paths for input and output images
-    input_image_path = "input_image1.jpeg"  # Replace with your image path
+    input_image_path = "input_image1.jpeg"
     output_dir = "output_images_1"
     
     # Creating the directory if it doesn't exist
@@ -130,7 +130,7 @@ def main():
 def main_two():
     print("\n\nThis next section is for the second image\n")
     # Paths for input and output images
-    input_image_path = "input_image2.jpg"  # Replace with your image path
+    input_image_path = "input_image2.jpg"
     output_dir = "output_images_2"
     
     # Create the directory if it doesn't exist
@@ -162,8 +162,9 @@ def main_two():
     save_image(blurry_wiener_deblurred, os.path.join(output_dir, "blurry_wiener_deblurred2.jpg"))
     
     # Step 5: Apply Lucy-Richardson deconvolution
-    psf = cv2.getGaussianKernel(15, 5)  # Create a Gaussian PSF matching the blur
-    psf = psf @ psf.T  # Convert 1D kernel to 2D
+    # Creating Gaussian PSF matching the blur
+    psf = cv2.getGaussianKernel(15, 5)
+    psf = psf @ psf.T
 
     # Noisy
     noisy_lucy_deblurred = apply_lucy_richardson(noisy_image, psf, iterations=30)
